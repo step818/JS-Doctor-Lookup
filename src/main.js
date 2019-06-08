@@ -1,7 +1,7 @@
 import { DoctorLookupService } from './drlookup';
 
 $(document).ready(function() {
-  $('#found').click(function() {
+  $('#find').click(function() {
     let search = $('#search').val();
     $('#search').val("");
 

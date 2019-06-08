@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doctor Lookup</title>
+  </head>
+  <body>
+    <h2>Doctor Lookup</h2>
+    <div id="mainGrid">
+      <div id="formInput">
+        <div class="formDivs">
+          <form id="doctorList">
+            <label class="formLabel" for="allDoctors">Search for a doctor by specialty</label>
+            <select id="doctorSpecialty"></select><br>
+            <button id="find" class="button">Search</button>
+          </form>
+        </div>
+        <div class="formDivs">
+          <form id="searchByDoctor">
+            <label class="formLabel" for="doctorName">Search for a doctor by name</label>
+            <input id="doctorName" type="text" required></input></form><br>
+            <button id="findName" class="button">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="showDoctor"></div>
+    <div class="showErrors"></div>
+  </body>
+</html>
