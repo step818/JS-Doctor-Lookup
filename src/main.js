@@ -1,4 +1,5 @@
-import { DoctorLookupService } from './drlookup';
+import { DoctorLookupService } from './drlookup.js';
+import $ from 'jquery';
 
 $(document).ready(function() {
   $('#find').click(function() {
