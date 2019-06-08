@@ -1,5 +1,3 @@
-//4df9d59bd9a27c19344ad10d1b395dbb
-
 export class DoctorLookupService {
 
   getDoctorByCondition(name) {
@@ -13,7 +11,7 @@ export class DoctorLookupService {
         } else {
           reject(Error(request.statusText));
         }
-      }
+      };
       request.open("GET", url, true);
       request.send();
     });
