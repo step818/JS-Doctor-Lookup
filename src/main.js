@@ -24,9 +24,20 @@ $(document).ready(function() {
       console.log(body);
 
       if(body.data.length > 0) {
+        $('.showDoctor').empty();
         for(let i= 0; i<body.data.length; i++) {
 
-          $('.showDoctor').append(`<ul> <li>${body.data[i].profile.first_name}</li> <li> ${body.data[i].profile.last_name}</li><li> ${body.data[i].specialties[0].description}</li><li> ${body.data[i].practices[0].accepts_new_patients}</li><li> ${body.data[i].practices[0].phones[0].number}</li></ul>`);
+          $('.showDoctor').append(`<ul> <li><strong>First:</strong> ${body.data[i].profile.first_name}</li>
+          
+          <li><strong>Last:</strong> ${body.data[i].profile.last_name}</li>
+          
+          <strong><li>Specialty:</strong> ${body.data[i].specialties[0].description}</li>
+          
+          <li><strong>Accepting new patients:</strong> ${body.data[i].practices[0].accepts_new_patients}</li>
+          
+          <li><strong>Location:</strong> ${body.data[i].practices[0].visit_address.city}, ${body.data[i].practices[0].visit_address.state} </li>
+          
+          <li><strong>Phone:</strong> ${body.data[i].practices[0].phones[0].number}</li></ul>`);
         }
       } else {
         $('.showDoctor').text('There are no matches for your search input.');
