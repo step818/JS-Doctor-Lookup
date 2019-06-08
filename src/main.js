@@ -26,7 +26,7 @@ $(document).ready(function() {
       if(body.data.length > 0) {
         for(let i= 0; i<body.data.length; i++) {
 
-          $('.showDoctor').append(`${body.data[i].profile.first_name} ${body.data[i].profile.last_name} `);
+          $('.showDoctor').append(`<ul> <li>${body.data[i].profile.first_name}</li> <li> ${body.data[i].profile.last_name}</li><li> ${body.data[i].specialties[0].description}</li><li> ${body.data[i].practices[0].accepts_new_patients}</li><li> ${body.data[i].practices[0].phones[0].number}</li></ul>`);
         }
       } else {
         $('.showDoctor').text('There are no matches for your search input.');
