@@ -1,5 +1,8 @@
 import { DoctorLookupService } from './drlookup.js';
 import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 
 $(document).ready(function() {
   $('#find').click(function(event) {
@@ -23,7 +26,9 @@ $(document).ready(function() {
 
       console.log(body);
 
-      if(body.data.length > 0) {
+      if(name == "") {
+        $('.showDoctor').text('There are no matches for your search input.');
+      } else if (body.data.length > 0) {
         $('.showDoctor').empty();
         
         for(let i= 0; i<body.data.length; i++) {
@@ -42,7 +47,7 @@ $(document).ready(function() {
               
               <li><strong>Phone:</strong> ${body.data[i].practices[0].phones[0].number}</li>
             </ul>
-            
+
               <img src="${body.data[i].profile.image_url}">
             `);
         }
